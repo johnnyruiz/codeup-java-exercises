@@ -10,10 +10,127 @@ public class HelloWorld {
     public static void main(String[] args) {
         //this is a single line comment
         /*this is a block comment */
-        System.out.print("Hello");
-        System.out.print(", World!");
+        {
+            System.out.print("Hello");
+            System.out.print(", World!");
+        }
+        //spacer tab below
+        System.out.println("\t");
+        {
+            int myFavoriteNumber;
+            String myString;
+
+            myFavoriteNumber = 25;
+            myString = "My favorite number is: ";
+            System.out.print(myString);
+            System.out.print(myFavoriteNumber);
+        }
+        //spacer tab below
+        System.out.println("\t");
+
+        {
+            long myNumber = 123;
+            System.out.print(myNumber);
+        }
+        //spacer tab below
+        System.out.println("\t");
+        {
+            //post increment
+            //x++ prints the original value first the increments the variable
+            int x = 5;
+            System.out.println(x++);
+            System.out.println(x);
+            //returns
+            //5
+            //6
+        }
+        {
+            //pre increment
+            //++x increments the value first then prints out it's value
+            int x = 5;
+            System.out.println(++x);
+            System.out.println(x);
+            //returns
+            //6
+            //6
+        }
+
+
+            //Note: you can not use 'class' as a variable name
+            //String class = "This string";
+            //other examples of reserved words :
+
+            // abstract, continue, for, new, switch, assert, default,
+            // goto, package, synchronized, boolean, do, if, private,
+            // this, break, double, implements, protected, throw, byte,
+            // else, import, public, throws, case, enum, instanceof,
+            // return, transient, catch, extends, int, short, try, char,
+            // final, interface, static, void, class, finally, long,
+            // strictfp, volatile, const, float, native, super, while,
+
+
+
+
+            //String type variables can not be converted this way
+            //  int three = (int) "three";
+            //  System.out.println(three);
+
+
+        {
+            int x = 4;
+            x += 5;
+            System.out.println(x);
+            // output
+            //9
+        }
+        {
+            int x = 3;
+            int y = 4;
+            System.out.println(x + y);
+            // output
+            // 7
+        }
+        {
+            int x = 10;
+            int y = 2;
+            System.out.println(x / y);
+            System.out.println(y - x);
+            // output
+            //
+        }
+        {
+            //when setting the value of a variable
+            //to larger or smaller than it's type can
+            //hold you will get back an error
+            //*incompatible types
+
+            //byte toHigh = 130;
+            //System.out.println(toHigh);
+        }
+        {
+            //when you increment a variable that is larger than
+            //it's type can hold it will go back to the lowest value
+            //it can hold and increase from there
+            byte thisValue = 126;
+            thisValue += 2;
+            System.out.println(thisValue);
+            //byte -128 to 127
+            //output
+            //-128
+            //MAX_VALUE and MIN_VALUE can be used as a reference of the
+            //highest and lowest value that can be assigned to a type
+            System.out.println(Byte.MAX_VALUE);
+            System.out.println(Byte.MIN_VALUE);
+        }
     }
 }
+
+///////////////////////////////////////////////////////////////////
+/////////////////////////Reference////////////////////////////////
+/////////////////////////////////////////////////////////////////
+
+// psvm tab pronts out main method
+// sopt tab is System.out.println
 
         //<-----DATA TYPES----->//
 
