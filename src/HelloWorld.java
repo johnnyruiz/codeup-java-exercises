@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class HelloWorld {
 
     /**
@@ -121,6 +123,35 @@ public class HelloWorld {
             //highest and lowest value that can be assigned to a type
             System.out.println(Byte.MAX_VALUE);
             System.out.println(Byte.MIN_VALUE);
+        }
+        {
+            String name = "codeup";
+            System.out.format("Hello there, %s. Nice to see you. \n", name);
+            //output
+            // Hello there, codeup. Nice to see you.
+        }
+        {
+            String greeting = "Salutations";
+            String name = "codeup";
+            System.out.format("%s, %s!", greeting, name);
+            //output
+            //Salutations, codeup!
+        }
+        //spacer tab below
+        System.out.println("\t");
+        {
+            Scanner scanner = new Scanner(System.in);
+
+
+            System.out.print("Enter something: ");
+            //below will only grab the first item the user enters
+            //String userInput = scanner.next();
+            //Will grab the whole input
+            //String userInput = scanner.nextLine();
+            // Will grab the integer the user inputs
+            int userInput = scanner.nextInt();
+
+            System.out.println("You entered: --> \"" + userInput + "\" <--");
         }
     }
 }
