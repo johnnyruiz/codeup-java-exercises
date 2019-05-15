@@ -3,7 +3,7 @@ public class StringExercise {
 
         public static void main(String[] args) {
 
-                Scanner scanner = new Scanner(System.in);
+                Scanner sc = new Scanner(System.in);
 
                 {
                         String education = ("We don't need no education We dont need no thought control");
