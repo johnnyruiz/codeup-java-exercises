@@ -4,20 +4,20 @@ import java.util.Random;
 public class MethodsExercises {
 
     public static void main(String[] args) {
-        sayHello();
-        sayHello("Johnny");
-        sayHello(6);
-        format(getTotal(10, 20), "US");
-        format(getTotal(10, 20), "DE");
-        countDown(9);
-        addition(1, 2);
-        subtraction(1, 2);
-        multiplication(1, 2);
-        division(1, 2);
-        modulus(1, 2);
-        System.out.println(longMultiplication(5, 9));
-        System.out.println(getInteger(5, 10));
-        factorial();
+//        sayHello();
+//        sayHello("Johnny");
+//        sayHello(6);
+//        format(getTotal(10, 20), "US");
+//        format(getTotal(10, 20), "DE");
+//        countDown(9);
+//        addition(1, 2);
+//        subtraction(1, 2);
+//        multiplication(1, 2);
+//        division(2, 1);
+//        modulus(1, 2);
+//        System.out.println(longMultiplication(5, 9));
+//        System.out.println(getInteger(5, 10));
+//        factorial();
         rollDice();
     }
 
@@ -28,8 +28,8 @@ public class MethodsExercises {
         int diceSides = sc.nextInt();
         System.out.println("enter roll when your ready to roll the dice");
         String response = sc.next();
-        int di1 = rand.nextInt(diceSides);
-        int di2 = rand.nextInt(diceSides);
+        int di1 = rand.nextInt(diceSides + 1);
+        int di2 = rand.nextInt(diceSides + 1);
         if (response.equalsIgnoreCase("roll")){
             System.out.println("The first di landed on : " + di1);
             System.out.println("The second di landed on: " + di2);
@@ -67,8 +67,8 @@ public class MethodsExercises {
             return userInput;
         }else{
             System.out.println("Try again");
-            getInteger(5, 10);
-        } return userInput;
+            return getInteger(min, max);
+        }
     }
 
     public static int longMultiplication(int a, int b) {
