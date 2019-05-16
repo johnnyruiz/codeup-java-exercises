@@ -4,22 +4,21 @@ import java.util.Random;
 public class MethodsExercises {
 
     public static void main(String[] args) {
-//        sayHello();
-//        sayHello("Johnny");
-//        sayHello(6);
-//        format(getTotal(10, 20), "US");
-//        format(getTotal(10, 20), "DE");
-//        countDown(9);
-//        addition(1, 2);
-//        subtraction(1, 2);
-//        multiplication(1, 2);
-//        division(1, 2);
-//        modulus(1, 2);
-//        System.out.println(longMultiplication(5, 9));
-        //System.out.println(getInteger(5, 10));
-//        factorial();
+        sayHello();
+        sayHello("Johnny");
+        sayHello(6);
+        format(getTotal(10, 20), "US");
+        format(getTotal(10, 20), "DE");
+        countDown(9);
+        addition(1, 2);
+        subtraction(1, 2);
+        multiplication(1, 2);
+        division(1, 2);
+        modulus(1, 2);
+        System.out.println(longMultiplication(5, 9));
+        System.out.println(getInteger(5, 10));
+        factorial();
         rollDice();
-
     }
 
     public static void rollDice() {
