@@ -14,10 +14,10 @@ public class HighLow {
                 System.out.println("input \"Easy\", \"Normal\", or \"Hard\"");
                 String difficulty = sc.next();
                 //Easy difficulty
+                System.out.println("A random number has been generated for you");
+                System.out.println("The number is between 1-100");
+                System.out.println("Guess the number to WIN!");
                 if (difficulty.equalsIgnoreCase("easy")) {
-                    System.out.println("A random number has been generated for you");
-                    System.out.println("The number is between 1-100");
-                    System.out.println("Guess the number to WIN!");
                     int randomNumber = randomNumber();
                     int userGuess;
                     do {
@@ -26,9 +26,21 @@ public class HighLow {
                     } while (randomNumber != userGuess);
                     //Normal difficulty
                 } else if (difficulty.equalsIgnoreCase("normal")) {
-                    System.out.println("A random number has been generated for you");
-                    System.out.println("The number is between 1-100");
-                    System.out.println("Guess the number to WIN!");
+                    System.out.println("You have 8 guesses");
+                    int randomNumber = randomNumber();
+                    int userGuess;
+                    for (int i = 1; i <= 8; i += 1) {
+                        userGuess = guess();
+                        game(userGuess, randomNumber);
+                        if (randomNumber == userGuess) {
+                            break;
+                        } else if (i >= 8) {
+                            System.out.println("The number was : " + randomNumber);
+                            System.out.println("You lose Try Again?");
+                        }
+                    }
+                    //Hard difficulty
+                } else if (difficulty.equalsIgnoreCase("hard")) {
                     System.out.println("You have 5 guesses");
                     int randomNumber = randomNumber();
                     int userGuess;
@@ -38,24 +50,6 @@ public class HighLow {
                         if (randomNumber == userGuess) {
                             break;
                         } else if (i >= 5) {
-                            System.out.println("The number was : " + randomNumber);
-                            System.out.println("You lose Try Again?");
-                        }
-                    }
-                    //Hard difficulty
-                } else if (difficulty.equalsIgnoreCase("hard")) {
-                    System.out.println("A random number has been generated for you");
-                    System.out.println("The number is between 1-100");
-                    System.out.println("Guess the number to WIN!");
-                    System.out.println("You have 3 guesses");
-                    int randomNumber = randomNumber();
-                    int userGuess;
-                    for (int i = 1; i <= 3; i += 1) {
-                        userGuess = guess();
-                        game(userGuess, randomNumber);
-                        if (randomNumber == userGuess) {
-                            break;
-                        } else if (i >= 3) {
                             System.out.println("The number was : " + randomNumber);
                             System.out.println("You Lose Try Again?");
                         }
