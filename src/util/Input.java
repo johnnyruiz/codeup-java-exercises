@@ -32,7 +32,7 @@ public class Input {
     }
 
     public int getInt() {
-        return Integer.parseInt((getString("Give me a number: ")));
+        return Integer.parseInt((getString("Enter a number: ")));
     }
 
     public double getDouble() {
