@@ -5,6 +5,9 @@ import java.util.Arrays;
 
 public class MoviesApplication {
     public static void main(String[] args) {
+
+        Movie[] movies = MoviesArray.findAll();
+
         System.out.println("Welcome to my Movie Application");
         System.out.println(".___  ___.   ______   ____    ____  __   _______     _______.\n" +
                 "|   \\/   |  /  __  \\  \\   \\  /   / |  | |   ____|   /       |\n" +
@@ -21,21 +24,42 @@ public class MoviesApplication {
                 " category");
 
             int userResponse = input.getInt(-1, 6);
-
-            if (userResponse == 0) {
-                System.out.println("Goodbye");
-            } else if (userResponse == 1) {
-                System.out.println(Arrays.toString(MoviesArray.findAll()));
-            } else if (userResponse == 2) {
-                System.out.println("View Movies in the animated category");
-            } else if (userResponse == 3) {
-                System.out.println("View movies in the drama category");
-            } else if (userResponse == 4) {
-                System.out.println("View movies in the horror category");
-            } else if (userResponse == 5) {
-                System.out.println("View movies in the scifi category");
-            } else {
-                System.out.println("Error invalid number entered");
-            }
+                if (userResponse == 0) {
+                    System.out.println("Goodbye");
+                } else if (userResponse == 1) {
+                    for (Movie movie : movies) {
+                        System.out.println(movie.getName() + "- -" + movie.getCategory());
+                    }
+                } else if (userResponse == 2) {
+                    System.out.println("---Movies in the animated category---");
+                    for (Movie movie : movies) {
+                        if (movie.getCategory().equals("animated")) {
+                            System.out.println(movie.getName() + "- -" + movie.getCategory());
+                        }
+                    }
+                } else if (userResponse == 3) {
+                    System.out.println("---Movies in the drama category---");
+                    for (Movie movie : movies) {
+                        if (movie.getCategory().equals("drama")) {
+                            System.out.println(movie.getName() + "- -" + movie.getCategory());
+                        }
+                    }
+                } else if (userResponse == 4) {
+                    System.out.println("---Movies in the horror category---");
+                    for (Movie movie : movies) {
+                        if (movie.getCategory().equals("horror")) {
+                            System.out.println(movie.getName() + "- -" + movie.getCategory());
+                        }
+                    }
+                } else if (userResponse == 5) {
+                    System.out.println("----Movies in the scifi category---");
+                    for (Movie movie : movies) {
+                        if (movie.getCategory().equals("scifi")) {
+                            System.out.println(movie.getName() + "- -" + movie.getCategory());
+                        }
+                    }
+                } else {
+                    System.out.println("Error invalid number entered");
+                }
     }
 }

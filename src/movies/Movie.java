@@ -1,8 +1,8 @@
 package movies;
 
 public class Movie {
-    String name;
-    String category;
+    private String name;
+    private String category;
 
     public Movie(String name, String category){
         this.name = name;

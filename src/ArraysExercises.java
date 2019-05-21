@@ -11,7 +11,6 @@ public class ArraysExercises {
         String[] person = {"Jordan", "Joshua", "Jake"};
         person = addPerson(person, "Johnny");
         person = addPerson(person, "Jennifer");
-
         //prints the length of the array after it has been updated.
         System.out.println(person.length);
 
@@ -34,6 +33,7 @@ public class ArraysExercises {
 //    public static String addName(String name){
 //            return addPerson(name);
 //    }
+
     public static String[] addPerson(String[] arr, String name){
         int currentSize = arr.length;
         int newSize = currentSize + 1;
