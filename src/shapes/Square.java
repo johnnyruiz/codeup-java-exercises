@@ -10,7 +10,7 @@ public class Square extends Rectangle{
     @Override
     public long getArea(){
         System.out.println("The area of a Square is: ");
-        return side ^ 2;
+        return side * side;
     }
     @Override
     public long getPerimeter(){

@@ -27,10 +27,10 @@ public class Rectangle {
 
     public long getArea(){
         System.out.println("The area of the rectangle is: ");
-        return length * width;
+        return this.length * this.width;
     }
     public long getPerimeter(){
         System.out.println("The perimeter of the rectangle is: ");
-        return 2 * length + 2 * width;
+        return 2 * this.length + 2 * this.width;
     }
 }
