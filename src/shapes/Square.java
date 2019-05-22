@@ -1,20 +1,33 @@
 package shapes;
 
-public class Square extends Rectangle{
-    public long side;
+public class Square extends Quadrilateral{
 
-    public Square(long side) {
+//    public double side;
+
+    public Square(double side) {
         super(side, side);
-        this.side = side;
     }
+
     @Override
-    public long getArea(){
-        System.out.println("The area of a Square is: ");
-        return side * side;
+    public double length() {
+        return this.length;
     }
+
     @Override
-    public long getPerimeter(){
-        System.out.println("The Perimeter of a square is: ");
-        return 4 * side;
+    public double width() {
+        return this.width;
     }
+
+    @Override
+    public double getArea() {
+        System.out.println("The Area of the square is: ");
+        return this.length * this.width;
+    }
+
+    @Override
+    public double getPerimeter() {
+        System.out.println("The perimeter of the square is: ");
+        return this.length * 4;
+    }
+
 }

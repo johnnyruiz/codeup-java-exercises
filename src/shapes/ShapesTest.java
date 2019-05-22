@@ -2,14 +2,28 @@ package shapes;
 
 public class ShapesTest {
     public static void main(String[] args) {
-        Rectangle box1 = new Rectangle(3, 5);
-        Square box2 = new Square(10);
+        Measurable myShape = new Measurable() {
+            @Override
+            public double getPerimeter() {
+                return 0;
+            }
 
-        System.out.println(box1.getArea());
-        System.out.println(box1.getPerimeter());
+            @Override
+            public double getArea() {
+                return 0;
+            }
+        };
+        System.out.println(myShape.getArea());
+        System.out.println(myShape.getPerimeter());
 
-        System.out.println(box2.getArea());
-        System.out.println(box2.getPerimeter());
+        Rectangle myRectangle = new Rectangle(2, 4);
+        System.out.println(myRectangle.getArea());
+        System.out.println(myRectangle.getPerimeter());
+
+        Square mySquare = new Square(2);
+        System.out.println(mySquare.getArea());
+        System.out.println(mySquare.getPerimeter());
 
     }
 }
+
