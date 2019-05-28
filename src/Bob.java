@@ -6,6 +6,7 @@ public class Bob {
         Scanner sc = new Scanner(System.in);
         System.out.println("Do you want to talk to Bob?");
         String userResponse = sc.next();
+
         if (userResponse.equalsIgnoreCase("yes")) {
             System.out.println("ask Bob a question");
             String userInput;

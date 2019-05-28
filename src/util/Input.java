@@ -32,11 +32,25 @@ public class Input {
     }
 
     public int getInt() {
-        return Integer.parseInt((getString("Enter a number: ")));
+        int number;
+            try{
+                number = Integer.valueOf((getString("Enter a number: ")));
+            } catch (NumberFormatException nfe){
+                System.out.println("Input is not valid.");
+                return getInt();
+            }
+            return number;
     }
 
     public double getDouble() {
-        return Double.parseDouble(getString("Give me a decimal!"));
+        double number;
+        try{
+            number = Double.parseDouble(getString("Give me a decimal!"));
+        } catch (NumberFormatException nfe){
+            System.out.println("Input is not valid.");
+            return getInt();
+        }
+        return number;
     }
 
     public double getDouble(double min, double max) {
