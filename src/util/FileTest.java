@@ -8,8 +8,46 @@ import java.nio.file.StandardOpenOption;
 import java.util.Arrays;
 import java.util.List;
 
+//      _______________________________________________________
+//      |                                                      |
+//      |   Can be a method for formatting the phone numbers   |
+//      |______________________________________________________|
+//      |      phoneNum = 1234567                              |
+//      |      first = phoneNum.substring(0,3);                |
+//      |      second = phoneNum.substring(4,8);               |
+//      |      system.out.println(first + "-" + second)        |
+//      |      expected 123-4567                               |
+//      |                                                      |
+//      |______________________________________________________|
+
+
 public class FileTest {
+
+    public static String format(String number){
+        if(number.length() == 7) {
+            String first = number.substring(0, 3);
+            String second = number.substring(3, 7);
+            return "(" + first + ")" + "-" + second;
+        } else if (number.length() == 10){
+            String first = number.substring(0, 3);
+            String second = number.substring(3, 6);
+            String third = number.substring(6, 10);
+            return "(" + first + ")" + "-" + second + "-" + third;
+        }  return "Error invalid entry";
+    }
     public static void main(String[] args) {
+
+        String phone1 = "1234567";
+        String phone2 = "1234567891";
+
+        System.out.println(phone1);
+        System.out.println(format(phone1));
+
+        System.out.println(phone2);
+        System.out.println(format(phone2));
+
+        
+
         String directory = "data";
 
         Path folder = Paths.get(directory);
