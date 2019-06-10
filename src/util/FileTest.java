@@ -77,6 +77,11 @@ public class FileTest {
 //            } catch (IOException e){
 //                e.printStackTrace();
 //            }
+        try {
+            Files.write(file, Arrays.asList("David"), StandardOpenOption.APPEND);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
         try {
@@ -88,11 +93,7 @@ public class FileTest {
             e.printStackTrace();
         }
 
-        try {
-            Files.write(file, Arrays.asList("Ryan"), StandardOpenOption.APPEND);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
 
 
     }

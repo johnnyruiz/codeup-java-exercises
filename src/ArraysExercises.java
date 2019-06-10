@@ -5,8 +5,17 @@ public class ArraysExercises {
 
     public static void main(String[] args) {
         //Numbers array
-        int[] numbers = {1, 2, 3, 4, 5};
+        int[] numbers = {1, 2, 3, 4, 5, 8, 7, 3, 6};
+//      Converts the int array into a string array
+        String strNumbers[] = new String[numbers.length]
+        for (int i = 0; i < numbers.length; i++)
+            strNumbers[i] = String.valueOf(numbers[i]);
+
+//        test
+        System.out.println(Arrays.toString(strNumbers));
+//        test
         System.out.println(Arrays.toString(numbers));
+
         //String array
         String[] person = {"Jordan", "Joshua", "Jake"};
         person = addPerson(person, "Johnny");
